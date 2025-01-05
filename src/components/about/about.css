@@ -1,0 +1,345 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+section.onlin_dream {
+    height: 100vh;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    padding: 150px 0 0 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    color: azure;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.container p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+section.about_smart p {
+    color: rgb(38, 66, 89);
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+section.about_smart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 30px;
+    background-color: gray;
+}
+
+section.about_smart .div2 {
+    background-image: url(imgs/ab2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 600px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    color: azure;
+    margin-left: 30px;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+
+.about_smart .div2 h2 {
+    font-size: 40px;
+    z-index: 1;
+}
+
+.container1 {
+    padding: 50px;
+    text-align: center;
+    background-color: #0D0745;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-smart {
+    margin-bottom: 40px;
+}
+
+.about-smart h1 {
+    font-size: 64px;
+}
+
+.container1 p {
+    color: #ffffff;
+}
+
+.smart {
+    color: #007BFF;
+}
+
+.about-smart2 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.about-smart3 {
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    max-width: 900px;
+    padding: 20px;
+    text-align: left;
+}
+
+.my-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+
+.Web-Development, .Mobile-Apps, .AI-Solution {
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;    
+}
+
+.about-smart2 div {
+    flex: 1;
+    max-width: 300px;
+    margin: 10px;
+    text-align: center;
+}
+
+.about-smart2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+h3 {
+    margin: 15px 0 10px;
+}
+
+
+
+.page3 {
+    background-color: #208ab2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    text-align: center;
+    align-items: center;
+}
+
+.image-column {
+    display: flex;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+.image-column img {
+    height: 510px;
+    width: 430px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.text-column {
+    width: 40%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.Our-culture, .our-vision {
+    background-color: #E9E9E9;
+    border: 1px solid black;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 8px;
+    color: #208ab2;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.Our-culture p, .our-vision p {
+    color: #134163;
+    margin: 10px 0;
+}
+
+.Our-culture .im, .our-vision .im {
+    padding-bottom: 6px;
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    background-color: #E8ECF4;
+}
+
+.elevating {
+    max-width: 600px;
+    margin-right: 40px;
+    text-align: left;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 510px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.we_grow {
+    color: #208ab2;
+}
+
+.img {
+    flex-shrink: 0;
+}
+
+.img img {
+    height: auto;
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .my-button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .about-smart h1 {
+        font-size: 36px;
+    }
+
+    .experiences {
+        font-size: 20px;
+    }
+    .container{
+        padding: 0 10px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .container h1{
+        font-size: 25px;
+    }
+    .container p{
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px) {
+    section.about_smart {
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    section.about_smart .div2 {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .container h1{
+        font-size: 25px;
+    }
+    .container p{
+        font-size: 14px;
+    }
+
+    .elevating {
+        height: auto;
+    }
+
+    .image-column img {
+        width: 100%;
+        height: auto;
+    }
+
+    .text-column {
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .container1 {
+        padding: 30px;
+    }
+    
+    .about-smart h1 {
+        font-size: 48px;
+    }
+    
+    .about-smart2 {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-smart2 div {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+    
+    .img img {
+        width: 100%;
+    }
+}
