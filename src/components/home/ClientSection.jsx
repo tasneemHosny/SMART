@@ -33,15 +33,15 @@ const Clients = () => {
 
   return (
     <section className="bg-[#208AB2] text-white font-montserrat py-16">
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-8 sm:mb-12 md:mb-14">
+      <h2 className="sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 md:mb-14">
         Meet Our Happy Clients
       </h2>
   
       <div className="flex flex-wrap justify-center gap-16 sm:gap-10 md:gap-[150px] mb-10 md:mr-6 sm:mr-6">
         {stats.map((stat, index) => (
           <div key={index} className="flex flex-col items-center sm:w-full md:w-auto">
-            <h3 className="text-4xl sm:text-5xl md:text-7xl font-semibold mb-6">{stat.value}</h3>
-            <p className="text-lg sm:text-xl md:text-2xl font-medium">{stat.label}</p>
+            <h3 className="text-4xl sm:text-3xl md:text-5xl font-semibold mb-6">{stat.value}</h3>
+            <p className="text-lg sm:text-xl md:text-xl font-medium">{stat.label}</p>
           </div>
         ))}
       </div>

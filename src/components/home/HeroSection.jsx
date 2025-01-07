@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion"; 
-import VRImage from "./../../assets/images/vr-image.png";
+import VRImage from "./../../assets/images/vr.png";
 
 const HeroSection = () => {
   return (
@@ -12,7 +12,7 @@ const HeroSection = () => {
       />
       <div className="relative z-10 text-left lg:px-20 px-6 sm:px-11 font-nunito">
         <motion.h1
-          className="md:text-4xl sm:text-xl font-semibold max-w-[690px] text-black md:leading-normal text-center md:text-left"
+          className="md:text-3xl sm:text-xl font-semibold max-w-[690px] text-black md:leading-normal text-center md:text-left"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
@@ -22,7 +22,7 @@ const HeroSection = () => {
         </motion.h1>
 
         <motion.p
-          className="mt-8 md:text-[40px] sm:text-2xl font-bold text-black max-w-[530px] md:leading-normal text-center md:text-left"
+          className="mt-8 md:text-[30px] sm:text-2xl font-bold text-black max-w-[530px] md:leading-normal text-center md:text-left"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
@@ -35,7 +35,7 @@ const HeroSection = () => {
         </motion.p>
 
         <motion.p
-          className="mt-8 mb-9 md:text-[1.8rem] sm:text-xl text-black font-semibold max-w-[650px] md:leading-snug text-center md:text-left"
+          className="mt-8 mb-9 md:text-2xl sm:text-xl text-black font-semibold max-w-[580px] md:leading-snug text-center md:text-left"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
