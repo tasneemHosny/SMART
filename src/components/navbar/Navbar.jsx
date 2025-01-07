@@ -3,8 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import logo from "./../../assets/images/logo.png";
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
 
   const getLinkClass = (path) => {
@@ -14,8 +16,8 @@ function Navbar() {
   };
 
   return (
-    <nav className=" shadow-[0_4px_2px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)]">
-      <div className="mx-auto flex items-center justify-between px-6 py-4 lg:px-19 sm:px-11">
+    <nav className="shadow-[0_4px_2px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)]">
+      <div className="mx-auto flex items-center justify-between py-4 lg:px-20 sm:px-11">
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img
@@ -26,16 +28,49 @@ function Navbar() {
         </div>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-8 relative">
           <Link to="/" className={getLinkClass("/")}>
             Home
           </Link>
           <Link to="/about" className={getLinkClass("/about")}>
             About
           </Link>
-          <Link to="/services" className={getLinkClass("/services")}>
-            Services
-          </Link>
+          {/* Services with Dropdown */}
+          <div
+            className="relative group"
+            onMouseEnter={() => setIsDropdownOpen(true)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
+            <button
+              className={`font-medium ${
+                isDropdownOpen ? "text-[#127DF5]" : "text-black hover:text-blue-600"
+              }`}
+            >
+              Services
+            </button>
+            {isDropdownOpen && (
+              <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md z-10">
+                <ul className="py-2">
+                  <li>
+                    <Link
+                      to="/web-services"
+                      className="block px-4 py-2 text-sm text-black hover:bg-blue-100 hover:text-blue-600"
+                    >
+                      Web Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/design-services"
+                      className="block px-4 py-2 text-sm text-black hover:bg-blue-100 hover:text-blue-600"
+                    >
+                      Design Services
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
           <Link to="/careers" className={getLinkClass("/careers")}>
             Careers
           </Link>
@@ -62,10 +97,10 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gray-50 shadow-inner px-8">
+        <div className="md:hidden bg-gray-50 shadow-inner">
           <ul className="space-y-2 p-4">
             <li>
-              <Link to="/home" className={getLinkClass("/home")}>
+              <Link to="/" className={getLinkClass("/")}>
                 Home
               </Link>
             </li>
@@ -75,9 +110,34 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="/services" className={getLinkClass("/services")}>
-                Services
-              </Link>
+              <div className="group">
+                <button
+                  className="w-full text-left text-black hover:text-blue-600"
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                >
+                  Services
+                </button>
+                {isDropdownOpen && (
+                  <ul className="space-y-1 mt-2 pl-4">
+                    <li>
+                      <Link
+                        to="/web-services"
+                        className="block text-sm text-black hover:text-blue-600"
+                      >
+                        Web Services
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/design-services"
+                        className="block text-sm text-black hover:text-blue-600"
+                      >
+                        Design Services
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+              </div>
             </li>
             <li>
               <Link to="/careers" className={getLinkClass("/careers")}>
@@ -85,13 +145,9 @@ function Navbar() {
               </Link>
             </li>
             <li className="mt-4">
-              <Link
-                to="/contact"
-                className="flex items-center text-black hover:text-blue-600 focus:text-blue-600 active:text-blue-800 transition-colors duration-200"
-              >
-                <FontAwesomeIcon icon={faPhone} className="mr-2" />
-                <span>+20 1800013420 Let's talk</span>
-              </Link>
+              <span className="text-black block">
+                <FontAwesomeIcon icon={faPhone} /> +20 1800013420 Let's talk
+              </span>
             </li>
           </ul>
         </div>
