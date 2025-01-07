@@ -5,7 +5,20 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {fontFamily: {
+      nunito: ['Nunito', 'sans-serif'],
+      montserrat: ['Montserrat', 'sans-serif'],
+    },
+    animation: {
+      scroll: "scroll 10s linear infinite",
+    },
+    keyframes: {
+      scroll: {
+        "0%": { transform: "translateX(0)" },
+        "100%": { transform: "translateX(-100%)" },
+      },
+    },
+  },
   },
   plugins: [],
 }

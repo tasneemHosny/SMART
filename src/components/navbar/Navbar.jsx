@@ -15,7 +15,7 @@ function Navbar() {
 
   return (
     <nav className=" shadow-[0_4px_2px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)]">
-      <div className="mx-auto flex items-center justify-between py-4 lg:px-20 sm:px-11">
+      <div className="mx-auto flex items-center justify-between px-6 py-4 lg:px-19 sm:px-11">
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img
