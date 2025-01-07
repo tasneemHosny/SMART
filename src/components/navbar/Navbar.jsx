@@ -62,7 +62,7 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gray-50 shadow-inner">
+        <div className="md:hidden bg-gray-50 shadow-inner px-8">
           <ul className="space-y-2 p-4">
             <li>
               <Link to="/home" className={getLinkClass("/home")}>
@@ -85,9 +85,13 @@ function Navbar() {
               </Link>
             </li>
             <li className="mt-4">
-              <span className="text-black block">
-                <FontAwesomeIcon icon={faPhone} /> +20 1800013420 Let's talk
-              </span>
+              <Link
+                to="/contact"
+                className="flex items-center text-black hover:text-blue-600 focus:text-blue-600 active:text-blue-800 transition-colors duration-200"
+              >
+                <FontAwesomeIcon icon={faPhone} className="mr-2" />
+                <span>+20 1800013420 Let's talk</span>
+              </Link>
             </li>
           </ul>
         </div>

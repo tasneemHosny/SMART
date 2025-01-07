@@ -1,20 +1,4 @@
-/* Group 35
-.outer-contact {
-  position: absolute;
-  width: 633px;
-  height: 477px;
-  left: 0px;
-  top: 0px;
+*{
+  font-family: "Nunito", serif;
+
 }
-
-/* Rectangle 9557 */
-/* .contact-img {
-  position: absolute;
-  width: 633px;
-  height: 477px;
-  left: 0px;
-  top: 0px;
-
-  background: linear-gradient(179.9deg, #134163 0.09%, #2784c9 79.4%);
-  border-radius: 25px;
-} */ 
