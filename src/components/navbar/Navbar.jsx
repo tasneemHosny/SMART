@@ -64,7 +64,7 @@ function Navbar() {
                       to="/design-services"
                       className="block px-4 py-2 text-sm text-black hover:bg-blue-100 hover:text-blue-600"
                     >
-                      Design Services
+                      Design Services 
                     </Link>
                   </li>
                 </ul>

@@ -248,10 +248,10 @@ function About() {
             </h1>
             <p>
               As dedicated collaborators in your success, we are <br /> deeply
-              committed to advancing your business <br /> alongside our own. Our
-              mission is to <br />
-              <br /> understand your vision, align our strategies, <br />
-              and collectively propel your brand to <br />
+              committed to advancing your business <br /> alongside our own.<br /> Our
+              mission is to 
+               understand your vision,<br /> align our strategies, 
+              and <br />collectively propel your brand to <br />
               unparalleled heights.
             </p>
           </div>
