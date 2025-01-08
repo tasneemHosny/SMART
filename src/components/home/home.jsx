@@ -1,144 +1,88 @@
-import React from "react";
+import React, { useRef } from "react";
+import styles from "./page.module.css";
+import EmblaCarousel from "./EmblaCarousel/EmblaCarousel";
+import ScrollToTopArrow from "../../ScrollToTopArrow"; // Import the ScrollToTopArrow component
+import Screenshot1 from '../../assets/images/screenshot1.png';
+import Screenshot2 from '../../assets/images/screenshot2.png';
+import Screenshot3 from '../../assets/images/screenshot3.png';
+import Frame169 from '../../assets/images/Frame169.png';
+import Frame170 from '../../assets/images/Frame170.png';
+import Frame171 from '../../assets/images/Frame171.png';
+import SmartIntro from "./Div/SmartIntro";
 import HeroSection from "./HeroSection";
 import AboutSection from "./AboutSection"; 
 import Services from "./ServiceSection";
 import Clients from "./ClientSection";
 
+export default function Home() { 
+  const servicesRef = useRef(null);  
 
-const Home = () => {
-  return (
-    <div className="home-page">
-      <section className="hero-section">
-        <HeroSection />
-      </section>
-
-      <section className="about-section">
-        <AboutSection />
-      </section>
-
-      <section className="services-section">
-      <Services />
-      </section>
-
-      <section className="client-section">
-      <Clients />
-      </section>
-    </div>
-   
-  );
-};
-
-export default Home;
-
-
-{/**import React, { useEffect, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import VRImage from "./../../assets/images/vr-image.png"; 
-
-function Home() {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start end", "end start"],
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
-
-  useEffect(() => {
-    const updateMousePosition = (event) => {
-      if (!targetRef.current) return;
-      const { clientX, clientY } = event;
-      targetRef.current.style.setProperty("--mouse-x", `${clientX}px`);
-      targetRef.current.style.setProperty("--mouse-y", `${clientY}px`);
-    };
-    window.addEventListener("mousemove", updateMousePosition);
-    return () => {
-      window.removeEventListener("mousemove", updateMousePosition);
-    };
-  }, []);
+  const OPTIONS1 = {};
+  const OPTIONS2 = {};
+  const SLIDES1 = [
+    { 'img' : Frame169 },
+    { 'img' : Frame170 },
+    { 'img' : Frame171 },
+    { 'img' : Frame169 },
+    { 'img' : Frame170 },
+    { 'img' : Frame171 },
+  ];
+  const SLIDES2 = [
+    { 'name' : 'slides2', 'img' : Screenshot1 },
+    { 'img' : Screenshot2 },
+    { 'img' : Screenshot3 },
+    { 'img' : Screenshot1 },
+    { 'img' : Screenshot2 },
+    { 'img' : Screenshot3 },
+  ];
 
   return (
-    <div className="home">
-   
-      <section
-        ref={targetRef}
-        className="relative h-screen flex items-center justify-start bg-cover bg-center"
-        style={{ backgroundImage: `url(${VRImage})` }}
-      >
-        <div className="relative z-10 px-6 ml-[80px] text-left max-w-[800px]">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="md:text-4xl sm:text-2xl font-semibold text-black md:leading-normal"
-          >
-            Welcome to Smart Technology Company –
-            <br />
-            The future of your brand is here
-          </motion.h1>
+    <>
+      <div className="home-page">
+        <section className="hero-section">
+          <HeroSection servicesRef={servicesRef} />
+        </section>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.2 }}
-            className="mt-8 md:text-[40px] sm:text-2xl font-bold text-black max-w-[530px] md:leading-normal"
-          >
-            " Skip the complexities and let{" "}
-            <span
-              className="font-black"
-              style={{ color: "#127df5" }}
-            >
-              Smart Technology Company
-            </span>{" "}
-            take your brand to new heights "
-          </motion.p>
+        <section className="about-section">
+          <AboutSection />
+        </section>
 
-          <motion.p
-            style={{ opacity, scale }}
-            className="mt-8 md:text-[29px] sm:text-xl text-black font-semibold max-w-[650px] md:leading-snug"
-          >
-            We provide personalized strategies that ensure our clients feel
-            confident and at ease with their marketing and get fully supported
-            in navigating their marketing efforts.
-          </motion.p>
-        </div>
-      </section>
+        <section ref={servicesRef} className="services-section"> 
+          <Services />
+        </section>
 
-    
-      <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 px-6 py-24">
-        <div className="absolute inset-0 overflow-hidden">
-          <div
-            className="pointer-events-none absolute -inset-px opacity-50"
-            style={{
-              background:
-                "radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(59, 130, 246, 0.15), transparent 80%)",
-            }}
-          />
+        <section className="client-section">
+          <Clients />
+        </section>
+
+        <div className={styles.container}>
+          <div className={styles.carouselComponent1}>
+            <div className={styles.brand}>
+              <h1>Brand stories with <br/>Smart technology company </h1>
+              <p>Discover how<span> Smart technology company </span>has helped many brands succeed.</p>
+              <p>We’ve worked with a variety of businesses to boost their success and make a real impact.</p>
+            </div>
+            <EmblaCarousel slides={SLIDES1} options={OPTIONS1} />
+          </div>
+
+          <div className={styles.carouselComponent2}>
+            <h1>What Clients Say </h1>
+            <EmblaCarousel slides={SLIDES2} options={OPTIONS2} />
+          </div>
+
+          <SmartIntro />
+
+          <div className={styles.getContact}>
+            <div className={styles.contain}>
+              <p>See how we can elevate your brand, Let's Talk</p>
+              <button>
+                contact us
+              </button>
+            </div>
+          </div>
         </div>
-        <div className="relative mx-auto max-w-7xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-16 text-center"
-          >
-            <h1 className="mb-6 text-5xl font-bold tracking-tight text-blue-900 sm:text-7xl">
-              About{" "}
-              <span className="bg-gradient-to-r from-[#127DF5] to-[#0A5BC4] bg-clip-text text-transparent">
-                Smart
-              </span>
-            </h1>
-            <p className="mx-auto max-w-3xl text-xl text-blue-700">
-              Innovating at the intersection of web, mobile, and artificial
-              intelligence
-            </p>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+      </div>
+      <ScrollToTopArrow /> {/* Add ScrollToTopArrow */}
+    </>
   );
 }
-
-export default Home;
- */}
