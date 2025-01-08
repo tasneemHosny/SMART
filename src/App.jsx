@@ -7,6 +7,7 @@ import Home from "./components/Home/home.jsx";
 import About from "./components/about/about.jsx";
 import D_Services from "./components/services/DesignServices/D_Services.jsx";
 import W_Services from "./components/services/WebServices/W_Services.jsx";
+import Footer from "./components/footer/Footer.jsx";
 function App() {
   return (
     <Router>
@@ -21,7 +22,9 @@ function App() {
           <Route path="/Contact" element={<ContactForm />} />
           <Route path="/about" element={<About />} />
         </Routes>
+        <Footer />
       </div>
+      
     </Router>
   );
 }
