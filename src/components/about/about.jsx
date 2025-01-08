@@ -1,5 +1,4 @@
 import "./about.css";
-import arrow from "./../../assets/images/arrow.png";
 import blueZone from "./../../assets/images/blue-zone.png";
 import signalImg from "./../../assets/images/signal.png";
 import ab1 from "./../../assets/images/ab1.jpg";
@@ -49,6 +48,14 @@ function About() {
       window.removeEventListener("mousemove", updateMousePosition);
     };
   }, []);
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className="about">
@@ -181,6 +188,15 @@ function About() {
       </section>
       {/* 2. End About smart */}
 
+      {/* Scroll to Top Button */}
+      <div
+        onClick={scrollToTop}
+        className="fixed bottom-6 right-6 cursor-pointer z-50"
+        style={{ fontSize: '30px', color: '#333' }} // Dark grey color
+      >
+        ^ {/* The up arrow shape */}
+      </div>
+
       {/* 3. Start page3 */}
       <section className="page3">
         <div className="content-wrapper">
@@ -189,14 +205,16 @@ function About() {
           </div>
           <div className="text-column">
             <div className="Our-culture">
-              <img
-                src={blueZone}
-                alt="blue"
-                height="20px"
-                width="20px"
-                className="im"
-              />
-              <h3>Our Culture</h3>
+              <div className="header-container">
+                <img
+                  src={blueZone}
+                  alt="blue"
+                  height="20px"
+                  width="20px"
+                  className="im"
+                />
+                <h3>Our Culture</h3>
+              </div>
               <p>
                 At Smart, our culture is the driving force behind <br /> our
                 success and innovation. We are committed to <br />
@@ -208,14 +226,16 @@ function About() {
               </p>
             </div>
             <div className="our-vision">
-              <img
-                src={signalImg}
-                alt="signal"
-                height="20px"
-                width="20px"
-                className="im"
-              />
-              <h3>Our Vision</h3>
+              <div className="header-container">
+                <img
+                  src={signalImg}
+                  alt="signal"
+                  height="20px"
+                  width="20px"
+                  className="im"
+                />
+                <h3>Our Vision</h3>
+              </div>
               <p>
                 Our vision is to be the leading technology company <br /> in the
                 Middle East. With our wealth of expertise <br />
@@ -252,8 +272,7 @@ function About() {
             </p>
           </div>
           <div className="image-container">
-            <img src={ab4} alt="ab4" height="680px" />
-            <img src={arrow} alt="arrow" height="40px" width="20px" />
+            <img className="img-container2" src={ab4} alt="ab4" height="600px" />
           </div>
         </div>
       </section>
