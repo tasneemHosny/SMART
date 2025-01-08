@@ -5,28 +5,28 @@ const AboutSection = () => {
   return (
     <div className="relative">
       {/* Normal Design for Larger Screens */}
-      <div className="relative  bg-[#208AB2] min-h-screen hidden sm:flex">
+      <div className="relative bg-[#208AB2] min-h-screen hidden sm:flex">
         {/* Image with responsive diagonal width */}
         <img
           src={ScreenImage}
           alt="A background showcasing Smart Technology"
-          className="absolute right-0 top-0 h-full md:w-1/2 object-fit z-10"
+          className="absolute right-0 top-0 h-full sm:w-1/2 md:w-1/2 object-fit z-10"
         />
 
-      {/* Content Section */}
-      <div className="relative z-20 text-left lg:px-20 md:px-12 sm:px-8 px-6 py-8 mt-3  md:text-left xl:text-left">
-        <h2 className="text-base sm:text-lg md:text-xl lg:text-4xl font-bold text-white mb-6 uppercase font-montserrat">
-          About Smart Technology Company
-        </h2>
-        <p className="text-xs sm:text-sm md:text-base lg:text-xl text-[#EFEFEF] font-semibold leading-relaxed mb-6 w-[90%]">
-          Our mission is turning great ideas into reality.
-        </p>
-        <p className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl text-[#EFEFEF] font-bold leading-relaxed mb-4 max-w-[600px] font-nunito w-[90%]">
-          At <span className="font-black text-white">Smart Technology Company</span>, we ensure a
-          360° approach, integrating social media, SEO, and digital marketing to build a
-          unified and effective presence. We cover all aspects to make your brand shine.
-        </p>
-
+        {/* Content Section */}
+        <div className="relative z-20 text-left lg:px-20 md:px-12 sm:px-8 px-6 py-8 mt-3 md:text-left xl:text-left w-full sm:w-[80%] md:w-[70%] lg:w-[70%]">
+          <h2 className="text-base sm:text-lg md:text-xl lg:text-4xl font-bold text-white mb-6 uppercase font-montserrat">
+            About Smart Technology Company
+          </h2>
+          <p className="text-xs sm:text-sm md:text-base lg:text-xl text-[#EFEFEF] font-semibold leading-relaxed mb-6">
+            Our mission is turning great ideas into reality.
+          </p>
+          <p className="text-xs sm:text-sm md:text-base w-[90%] lg:text-xl xl:text-2xl text-[#EFEFEF] font-bold leading-relaxed mb-4 font-nunito">
+            At{" "}
+            <span className="font-extrabold text-white">
+              Smart Technology Company
+            </span>, we ensure a 360° approach, integrating social media, SEO, and digital marketing to build a unified and effective presence. We cover all aspects to make your brand shine.
+          </p>
 
           <div className="font-nunito">
             {[
@@ -54,14 +54,13 @@ const AboutSection = () => {
                   {item.title}
                 </h3>
                 <p className={`${item.maxWidth} text-xs sm:text-sm md:text-base lg:text-lg text-[#EFEFEF]`}>
-                  {item.content}
+                {item.content}
                 </p>
               </div>
             ))}
           </div>
         </div>
       </div>
-
 
       {/* Small Screen Design */}
       <div className="relative bg-gradient-to-b from-[#208AB2] to-[#1A6E90] text-white min-h-screen flex flex-col sm:hidden items-center justify-center px-6 lg:px-12 py-12">

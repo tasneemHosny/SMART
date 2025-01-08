@@ -20,7 +20,7 @@ import React from 'react';
   ]  
 const DesignServices = () => {
   return (
-    <div className='bg-gradient-to-bl from-[#A1A1A1] to-[#3B3B3B] min-h-[100vh]'>
+    <div className='bg-gradient-to-bl from-[#A1A1A1] to-[#3B3B3B] min-h-[100vh]  py-16'>
       <div className='w-[80%] mx-auto'>
         <h1 className='text-center pt-4 pb-10 text-2xl sm:text-3xl font-bold'>
             UI/UX Design Process

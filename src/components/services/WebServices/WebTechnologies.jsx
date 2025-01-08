@@ -30,13 +30,13 @@ const technologiesImages = [
 
 const WebTechnologies = () => {
   return (
-    <div className='mt-8'>
-      <div className='w-[90%] mx-auto'>
-        <h2 className='text-center text-3xl font-bold text-[#127DF5] pt-8 pb-12'>
+    <div className=''>
+      <div className='w-[90%] mx-auto py-16'>
+        <h2 className='text-center text-3xl font-bold text-[#127DF5]  '>
           Technologies we use in our company
         </h2>
         {/* Responsive Layout */}
-        <div className='flex flex-col lg:flex-row items-center lg:space-x-6 space-y-6 lg:space-y-0'>
+        <div className='flex flex-col lg:flex-row items-center justify-center lg:space-x-6 space-y-6 lg:space-y-0'>
           {technologiesImages.map(({ alt, className, src }) => (
             <img key={alt} className={`${className}`} src={src} alt={alt} />
           ))}

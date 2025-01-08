@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import logo from "./../../assets/images/logo.png";
-
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [timeoutId, setTimeoutId] = useState(null); // To handle the delay on mouse leave
   const location = useLocation();
 
   const getLinkClass = (path) => {
@@ -14,6 +14,18 @@ function Navbar() {
       ? "text-[#127DF5] font-medium"
       : "text-black hover:text-blue-600 font-medium";
   };
+
+  const handleMouseEnter = () => {
+    clearTimeout(timeoutId); // Clear any previous timeout when hovering over the dropdown
+    setIsDropdownOpen(true);
+  };
+
+  const handleMouseLeave = useCallback(() => {
+    const id = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 300); // Delay the closing by 300ms
+    setTimeoutId(id);
+  }, [timeoutId]);
 
   return (
     <nav className="shadow-[0_4px_2px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)]">
@@ -38,8 +50,8 @@ function Navbar() {
           {/* Services with Dropdown */}
           <div
             className="relative group"
-            onMouseEnter={() => setIsDropdownOpen(true)}
-            onMouseLeave={() => setIsDropdownOpen(false)}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <button
               className={`font-medium ${
@@ -49,7 +61,11 @@ function Navbar() {
               Services
             </button>
             {isDropdownOpen && (
-              <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md z-10">
+              <div
+                className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md z-10"
+                onMouseEnter={handleMouseEnter} // Keep dropdown open when hovering the menu
+                onMouseLeave={handleMouseLeave} // Close dropdown after delay when mouse leaves the menu
+              >
                 <ul className="py-2">
                   <li>
                     <Link
@@ -57,6 +73,14 @@ function Navbar() {
                       className="block px-4 py-2 text-sm text-black hover:bg-blue-100 hover:text-blue-600"
                     >
                       Web Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/app-services"
+                      className="block px-4 py-2 text-sm text-black hover:bg-blue-100 hover:text-blue-600"
+                    >
+                      App Services
                     </Link>
                   </li>
                   <li>
@@ -125,6 +149,14 @@ function Navbar() {
                         className="block text-sm text-black hover:text-blue-600"
                       >
                         Web Services
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/web-services"
+                        className="block text-sm text-black hover:text-blue-600"
+                      >
+                        App Services
                       </Link>
                     </li>
                     <li>

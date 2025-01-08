@@ -22,7 +22,7 @@ const WebServices = () => {
   return (
     <div className='bg-gradient-to-bl from-[#A1A1A1] to-[#3B3B3B] min-h-[100vh]'>
       <div className='w-[80%] mx-auto'>
-        <h1 className='text-center pt-4 pb-10 text-2xl sm:text-3xl font-bold'>
+        <h1 className='text-center pt-16 pb-10 text-2xl sm:text-3xl font-bold'>
           Expand Your Business with High-Performance,<br />Optimized Websites!
         </h1>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 p-6'>
