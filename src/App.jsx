@@ -3,10 +3,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar.jsx";
 import ContactForm from "./components/contact/contact.jsx"
 import CareersPage from "./components/careers/careers.jsx"
-import Home from "./components/Home/home.jsx";
+import Home from "./components/home/home.jsx";
 import About from "./components/about/about.jsx";
 import D_Services from "./components/services/DesignServices/D_Services.jsx";
 import W_Services from "./components/services/WebServices/W_Services.jsx";
+
 function App() {
   return (
     <Router>
