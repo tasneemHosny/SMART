@@ -259,7 +259,7 @@ h1{
     font-size:64px;
     font-weight: 800;
 }
-p{
+.elevating p{
     font-family: 'Nunito';
     font-size:24px;
     font-weight: 700;
@@ -525,8 +525,6 @@ p{
     .elevating h1{
         font-size:16px;
         line-height: 1.3;
-    }
-    
-    
+    } 
 }
 

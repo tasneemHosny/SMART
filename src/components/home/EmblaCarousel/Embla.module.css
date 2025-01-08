@@ -30,7 +30,7 @@
   width: 100%;
 }
 .embla__slide__imgFill{
-  border-radius: 30px;
+  border-radius: 20px;
   height: var(--slide-height);
   object-fit: cover;
 }
@@ -146,6 +146,9 @@
     width: 0.7rem;
     height: 0.7rem;
   }
+  .embla__slide__imgFill{
+    border-radius: 10px;
+    }
   .embla__slide__imgContain{
     height: 6.4rem;
     object-fit: contain;

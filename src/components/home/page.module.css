@@ -132,7 +132,7 @@
     font-size:40px;
   }
   .contain p{
-    font-size: 22px;
+    font-size: 20px;
   }
   .contain button{
     font-size: 20px;
@@ -143,8 +143,11 @@
   .getContact{
     padding: 2rem 3rem;
   }
+  .contain{
+    padding:0.9rem 1rem;
+  }
   .contain p{
-    font-size: 16px;
+    font-size: 15px;
   }
   .contain button{
     font-size: 14px;
@@ -167,11 +170,11 @@
     padding:0.5rem 0.8rem;
   }
   .contain p{
-    font-size: 15px;
+    font-size: 13px;
   }
   .getContact button{
-    font-size: 13px;
-    padding:0.2rem 0.6rem;
+    font-size: 11px;
+    padding:0.2rem 0.4rem;
   }
   .brand h1{
     font-size:22px;
@@ -206,12 +209,12 @@
     padding:0.8rem 0.5rem;
   }
   .contain p{
-    font-size:11.5px;
+    font-size:11px;
 
   }
   .getContact button{
-    font-size: 12px;
-    padding: 0.1rem 0.6rem;
+    font-size: 11px;
+    padding: 0.1rem 0.4rem;
   }
 }
 

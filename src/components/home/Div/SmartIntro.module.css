@@ -44,7 +44,7 @@
             font-size: 38px;
         }
         .left h1 span{
-            font-size:32px;
+            font-size:26px;
         }
 }
 @media (max-width : 900px) {
@@ -54,7 +54,7 @@
         }
         .left h1 span{
             color:#000;
-            font-size:26px;
+            font-size:24px;
         }
 }
 
@@ -66,7 +66,7 @@
         font-size:24px;
     }
     .left h1 span{
-        font-size:20px;
+        font-size:17px;
     }
   
 }
@@ -79,6 +79,9 @@
     }
     .left h1 span{
         font-size:16px;
+    }
+    .lineSpace{
+        display: none;
     }
 }
 @media screen and (max-width: 500px) {
@@ -98,7 +101,7 @@
         font-size:15px;
     }
     .left h1 span{
-        font-size:12px;
+        font-size:11px;
     }
     .lineSpace{
         line-height: 8px;
@@ -111,7 +114,10 @@
         font-size:14px;
     }
     .left h1 span{
-        font-size:10px;
+        font-size:9px;
+    }
+    .left p{
+        line-height: 0;
     }
     .lineSpace{
         line-height:0px;
