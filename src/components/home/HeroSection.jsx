@@ -13,7 +13,7 @@ const HeroSection = ({ servicesRef }) => {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center sm:items-start sm:justify-left sm:bg-gray-100 mt-[60px] min-h-screen overflow-hidden">
+    <div className="relative flex flex-col items-center justify-center sm:items-start sm:justify-left mt-[60px] min-h-screen overflow-hidden">
       <img
         src={VRImage}
         alt="Hero Background Image"
