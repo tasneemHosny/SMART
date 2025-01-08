@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; 
 import web from "./../../assets/images/web.png";
 import ui from "./../../assets/images/ui.png";
 import app from "./../../assets/images/app.png";
@@ -31,7 +32,7 @@ const Services = () => {
       <h2 className="md:text-4xl sm:text-2xl font-semibold font-montserrat text-black mb-[80px]">
         Discover What We Can Do for You!
       </h2>
-      <div className="flex flex-wrap justify-center gap-9">
+      <div className="flex flex-wrap justify-center gap-x-9 gap-y-16">
         {services.map((service, index) => (
           <div
             key={index}
@@ -55,14 +56,16 @@ const Services = () => {
             <p className="text-med text-gray-600 mb-6 px-2 font-nunito">{service.description}</p>
 
             <div className="absolute bottom-6 left-0 right-0 px-6">
-              <button className="w-full bg-[#208AB2] text-white py-2 px-4 rounded-3xl hover:bg-[#57a2be] flex items-center justify-center gap-2">
-                Enroll now
-                <img
-                  src={arrow}
-                  alt="Arrow Icon"
-                  className="w-5 h-5"
-                />
-              </button>
+              <Link to="/Contact">
+                <button className="w-full bg-[#208AB2] text-white py-2 px-4 rounded-3xl hover:bg-[#57a2be] flex items-center justify-center gap-2">
+                  Enroll now
+                  <img
+                    src={arrow}
+                    alt="Arrow Icon"
+                    className="w-5 h-5"
+                  />
+                </button>
+              </Link>
             </div>
           </div>
         ))}
