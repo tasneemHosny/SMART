@@ -15,7 +15,7 @@ const AboutSection = () => {
       <div className="absolute inset-0 bg-black bg-opacity-70 sm:block md:hidden lg:hidden z-10"></div>
 
       {/* Content Section */}
-      <div className="relative z-20 text-left lg:px-20 md:px-12 sm:px-8 px-6 py-8 mt-3 text-center md:text-left xl:text-left">
+      <div className="relative z-20 text-left lg:px-20 md:px-12 sm:px-8 px-6 py-8 mt-3  md:text-left xl:text-left">
         <h2 className="text-base sm:text-lg md:text-xl lg:text-4xl font-bold text-white mb-6 uppercase font-montserrat">
           About Smart Technology Company
         </h2>
