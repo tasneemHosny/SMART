@@ -189,6 +189,7 @@ function About() {
           </div>
           <div className="text-column">
             <div className="Our-culture">
+              <div className="header-container">
               <img
                 src={blueZone}
                 alt="blue"
@@ -197,6 +198,7 @@ function About() {
                 className="im"
               />
               <h3>Our Culture</h3>
+              </div>
               <p>
                 At Smart, our culture is the driving force behind <br /> our
                 success and innovation. We are committed to <br />
@@ -208,6 +210,7 @@ function About() {
               </p>
             </div>
             <div className="our-vision">
+            <div className="header-container">
               <img
                 src={signalImg}
                 alt="signal"
@@ -216,6 +219,7 @@ function About() {
                 className="im"
               />
               <h3>Our Vision</h3>
+              </div>
               <p>
                 Our vision is to be the leading technology company <br /> in the
                 Middle East. With our wealth of expertise <br />
@@ -252,8 +256,7 @@ function About() {
             </p>
           </div>
           <div className="image-container">
-            <img src={ab4} alt="ab4" height="680px" />
-            <img src={arrow} alt="arrow" height="40px" width="20px" />
+            <img className='img-container2' src={ab4} alt="ab4" height="600px" />
           </div>
         </div>
       </section>

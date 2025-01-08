@@ -1,0 +1,143 @@
+#contain{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url('./../../assets/images/screen-image.png');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    height: fit-content;
+    max-height: fit-content;
+    overflow: hidden;
+}
+#contain img{
+    display:none;
+}
+
+#content{
+    width: 100%;
+    padding:1rem 2rem;
+    font-family: 'Nunito';
+    height: fit-content;
+    max-height: fit-content;
+    
+}
+#content h2{
+    font-size:36px;
+    font-family: 'Nunito';
+    font-weight: 700;
+
+}
+#content h3{
+    font-size:22.14px;
+    font-family: 'Nunito';
+    font-weight: 800;
+}
+#content #intro{
+    font-size:26px;
+    font-family: 'Nunito';
+    font-weight: 700;
+}
+#content p{
+    font-size:17.71px;
+    font-family: 'Nunito';
+    font-weight: 600;
+}
+#content #mission{
+    font-size:25px;
+    font-family: 'Nunito';
+    font-weight: 700;
+}
+#intro span{
+    font-weight: 900;
+}
+
+/* Media Queries */
+@media (max-width : 1200px) {
+    #content h2{
+        font-size:30px;
+        font-family: 'Nunito';
+        font-weight: 700;
+    }
+    #content h3{
+        font-size:18.14px;
+        font-family: 'Nunito';
+        font-weight: 800;
+    }
+    #content #intro{
+        font-size:20px;
+        font-family: 'Nunito';
+        font-weight: 700;
+    }
+    #content p{
+        font-size:14px;
+        font-family: 'Nunito';
+        font-weight: 600;
+    }
+    
+    
+    #mission{
+        font-size:25px;
+        font-family: 'Nunito';
+        font-weight: 700;
+    }
+    #intro span{
+        font-weight: 900;
+    }
+}
+
+@media (max-width : 1024px) {
+    #content{
+        width: 100%;
+        padding:1rem 2rem;
+        font-family: 'Nunito';
+    }
+    #content h2{
+        font-size:26px;
+        line-height:0.5;
+    }
+    #content h3{
+        font-size:18.14px;
+        line-height:0.5;
+    }
+    #content #intro{
+        font-size:16px;
+    }
+    #content p{
+        font-size:14px;
+        line-height:1.8;
+    }
+    #content #mission{
+        font-size:15px;
+        line-height:0.5;
+        margin-bottom: 1.2rem;
+    }
+}
+@media (max-width : 900px) {
+    #content{
+        width: 100%;
+        padding:1.1rem 1.5rem;
+        font-family: 'Nunito';
+    }
+    #content h2{
+        font-size:24px;
+        line-height:0.5;
+    }
+    #content h3{
+        font-size:17.14px;
+        line-height:0.5;
+    }
+    #content #intro{
+        font-size:16px;
+    }
+    #content p{
+        font-size:12px;
+        line-height:1.6;
+    }
+    #content #mission{
+        font-size:15px;
+        line-height:0.5;
+        margin-bottom: 1.2rem;
+    }
+}
