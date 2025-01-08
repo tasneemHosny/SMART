@@ -18,10 +18,10 @@ const AboutSection = () => {
         <h2 className="text-base sm:text-lg md:text-xl lg:text-4xl font-bold text-white mb-6 uppercase font-montserrat">
           About Smart Technology Company
         </h2>
-        <p className="text-xs sm:text-sm md:text-base lg:text-xl text-[#EFEFEF] font-semibold leading-relaxed mb-6">
+        <p className="text-xs sm:text-sm md:text-base lg:text-xl text-[#EFEFEF] font-semibold leading-relaxed mb-6 w-[90%]">
           Our mission is turning great ideas into reality.
         </p>
-        <p className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl text-[#EFEFEF] font-bold leading-relaxed mb-4 max-w-[600px] font-nunito">
+        <p className="text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl text-[#EFEFEF] font-bold leading-relaxed mb-4 max-w-[600px] font-nunito w-[90%]">
           At <span className="font-black text-white">Smart Technology Company</span>, we ensure a
           360° approach, integrating social media, SEO, and digital marketing to build a
           unified and effective presence. We cover all aspects to make your brand shine.
