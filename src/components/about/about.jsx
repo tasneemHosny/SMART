@@ -148,7 +148,7 @@ function About() {
             className="mt-12 text-center"
           >
             <a
-              href="#contact"
+              href="/contact"
               className="group inline-flex items-center rounded-full bg-[#127DF5] px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-blue-700"
             >
               Get in touch

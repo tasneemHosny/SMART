@@ -6,7 +6,6 @@ import VRImageSmall from "../../assets/images/vr-image.png";
 
 const HeroSection = ({ servicesRef }) => {
   const handleScrollToServices = () => {
-    // Scroll to the services section with smooth behavior
     if (servicesRef && servicesRef.current) {
       servicesRef.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -61,16 +60,15 @@ const HeroSection = ({ servicesRef }) => {
             at ease with their marketing and get fully supported in <br /> navigating their marketing efforts.
           </motion.p>
 
-          {/* Arrow Button */}
           <motion.div
             className="mt-10 cursor-pointer flex items-center justify-start gap-3"
-            onClick={handleScrollToServices} // Trigger scroll on click
+            onClick={handleScrollToServices} 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
             <ChevronDown
-              size={40} // Adjust size of the arrow
+              size={40} 
               color="black"
               className="animate-bounce"
             />

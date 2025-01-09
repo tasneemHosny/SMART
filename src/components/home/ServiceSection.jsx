@@ -56,7 +56,7 @@ const Services = () => {
             <p className="text-med text-gray-600 mb-6 px-2 font-nunito">{service.description}</p>
 
             <div className="absolute bottom-6 left-0 right-0 px-6">
-              <Link to="/Contact">
+              <a href="/contact">
                 <button className="w-full bg-[#208AB2] text-white py-2 px-4 rounded-3xl hover:bg-[#57a2be] flex items-center justify-center gap-2">
                   Enroll now
                   <img
@@ -65,7 +65,7 @@ const Services = () => {
                     className="w-5 h-5"
                   />
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
         ))}

@@ -3,6 +3,8 @@ import WebServices from "./WebServices";
 import WebTechnologies from "./WebTechnologies";
 import WebDevelopment1 from "./WebDevelopment1";
 import WebDevelopment2 from "./WebDevelopment2";
+import ScrollToTopArrow from "../../../ScrollToTopArrow"; 
+
 function W_Services() {
     return (
         <>
@@ -11,6 +13,8 @@ function W_Services() {
         <WebServices />
         <WebProjects />
         <WebTechnologies />
+        <ScrollToTopArrow />
+
         </>
     );
   }
