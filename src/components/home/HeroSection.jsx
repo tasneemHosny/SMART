@@ -13,7 +13,7 @@ const HeroSection = ({ servicesRef }) => {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center sm:items-start sm:justify-left mt-[60px] min-h-screen overflow-hidden">
+    <div className="relative flex flex-col items-center justify-center sm:items-start sm:justify-left mt-[0px] min-h-screen overflow-hidden">
       <img
         src={VRImage}
         alt="Hero Background Image"
@@ -23,7 +23,7 @@ const HeroSection = ({ servicesRef }) => {
       <img
         src={VRImageSmall}
         alt="Hero Background Image (Small)"
-        className="absolute bg-gray-100 inset-0 w-full h-full object-fit sm:hidden"
+        className="absolute bg-white inset-0 w-full h-full object-fit sm:hidden"
       />
 
       <div className="relative z-10 lg:px-20 px-6 sm:px-11 font-nunito sm:text-left text-center">
@@ -74,7 +74,7 @@ const HeroSection = ({ servicesRef }) => {
               color="black"
               className="animate-bounce"
             />
-            <span className="text-xl font-bold text-black">Cover Our Services</span>
+            <span className="text-xl font-bold text-black">Discover Our Services</span>
           </motion.div>
         </div>
       </div>

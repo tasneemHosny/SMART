@@ -8,6 +8,7 @@ import About from "./components/about/about.jsx";
 import D_Services from "./components/services/DesignServices/D_Services.jsx";
 import W_Services from "./components/services/WebServices/W_Services.jsx";
 import Footer from "./components/footer/Footer.jsx";
+import AppDevelopement from "./components/services/AppDevelopment/AppDevMain.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/web-services" element={<W_Services />} />
+          <Route path="/app-services" element={<AppDevelopement />} />
           <Route path="/design-services" element={<D_Services />} />
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/Contact" element={<ContactForm />} />

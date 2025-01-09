@@ -32,7 +32,7 @@ const Services = () => {
       <h2 className="md:text-4xl sm:text-2xl font-semibold font-montserrat text-black mb-[80px]">
         Discover What We Can Do for You!
       </h2>
-      <div className="flex flex-wrap justify-center gap-9">
+      <div className="flex flex-wrap justify-center gap-x-9 gap-y-16">
         {services.map((service, index) => (
           <div
             key={index}

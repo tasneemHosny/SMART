@@ -5,7 +5,7 @@ const AboutSection = () => {
   return (
     <div className="relative">
       {/* Normal Design for Larger Screens */}
-      <div className="relative flex bg-[#208AB2] min-h-screen hidden sm:flex">
+      <div className="relative bg-[#208AB2] min-h-screen hidden sm:flex">
         {/* Image with responsive diagonal width */}
         <img
           src={ScreenImage}
@@ -54,7 +54,7 @@ const AboutSection = () => {
                   {item.title}
                 </h3>
                 <p className={`${item.maxWidth} text-xs sm:text-sm md:text-base lg:text-lg text-[#EFEFEF]`}>
-                  {item.content}
+                {item.content}
                 </p>
               </div>
             ))}

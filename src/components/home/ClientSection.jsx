@@ -23,7 +23,7 @@ const Clients = () => {
     slidesToShow: 5, 
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 0, 
+    autoplaySpeed:0, 
     cssEase: "ease-in-out", 
     pauseOnHover: true,
     focusOnSelect: false, 

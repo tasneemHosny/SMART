@@ -2,9 +2,9 @@ import React from 'react';
 
 const WebProjects = () => {
   return (
-    <div className='mt-8 bg-gradient-to-bl from-[#127DF5] to-[#0B498F] min-h-[100vh]'>
+    <div className='bg-gradient-to-bl from-[#127DF5] to-[#0B498F] min-h-[100vh]'>
       <div className='w-[80%] mx-auto'>
-        <h1 className='text-center pt-4 pb-10 text-2xl sm:text-3xl font-bold'>Our company projects in Web Development</h1>
+        <h1 className='text-center py-16 text-2xl sm:text-3xl font-bold'>Our company projects in Web Development</h1>
         <div className='flex flex-col md:flex-row'>
           <img 
             className='w-full md:w-[50%] h-[300px] md:h-[500px] rounded-md order-1 md:order-2 mb-6 md:mb-0'
