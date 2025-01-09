@@ -5,8 +5,10 @@ import ab1 from "./../../assets/images/ab1.jpg";
 import ab3 from "./../../assets/images/ab3.jpg";
 import ab4 from "./../../assets/images/ab4.jpg";
 import { useEffect, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight, Code, Smartphone, Brain } from "lucide-react";
+import ScrollToTopArrow from "../../ScrollToTopArrow"; 
+
 
 const services = [
   {
@@ -28,34 +30,6 @@ const services = [
 
 function About() {
   const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start end", "end start"],
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
-
-  useEffect(() => {
-    const updateMousePosition = (ev) => {
-      if (!targetRef.current) return;
-      const { clientX, clientY } = ev;
-      targetRef.current.style.setProperty("--mouse-x", `${clientX}px`);
-      targetRef.current.style.setProperty("--mouse-y", `${clientY}px`);
-    };
-    window.addEventListener("mousemove", updateMousePosition);
-    return () => {
-      window.removeEventListener("mousemove", updateMousePosition);
-    };
-  }, []);
-
-  // Scroll to top function
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <div className="about">
@@ -113,10 +87,7 @@ function About() {
             </p>
           </motion.div>
 
-          <motion.div
-            style={{ opacity, scale }}
-            className="grid gap-12 md:grid-cols-3"
-          >
+          <motion.div className="grid gap-12 md:grid-cols-3">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -187,15 +158,6 @@ function About() {
         </div>
       </section>
       {/* 2. End About smart */}
-
-      {/* Scroll to Top Button */}
-      <div
-        onClick={scrollToTop}
-        className="fixed bottom-6 right-6 cursor-pointer z-50"
-        style={{ fontSize: '30px', color: '#333' }} // Dark grey color
-      >
-        ^ {/* The up arrow shape */}
-      </div>
 
       {/* 3. Start page3 */}
       <section className="page3">
@@ -277,6 +239,7 @@ function About() {
         </div>
       </section>
       {/* 4. End page4 */}
+      <ScrollToTopArrow /> 
     </div>
   );
 }

@@ -29,7 +29,7 @@ const HeroSection = ({ servicesRef }) => {
       <div className="relative z-10 lg:px-20 px-6 sm:px-11 font-nunito sm:text-left text-center">
         <div className="sm:bg-transparent bg-white bg-opacity-70 sm:rounded-none rounded-lg p-4 sm:p-0">
           <motion.h1
-            className="text-[6vw] sm:text-[5vw] md:text-[2.5vw] font-semibold max-w-full text-black leading-[1.2] sm:text-left text-center"
+            className="text-[6vw] sm:text-[5vw] md:text-[2.5vw] max-w-[70%] font-semibold max-w-full text-black leading-[1.2] sm:text-left text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}

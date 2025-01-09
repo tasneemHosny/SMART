@@ -10,7 +10,7 @@ const AboutSection = () => {
         <img
           src={ScreenImage}
           alt="A background showcasing Smart Technology"
-          className="absolute right-0 top-0 h-full md:w-1/2 object-fit z-10"
+          className="absolute right-0 top-0 h-full sm:w-1/2 md:w-1/2 object-fit z-10"
         />
 
         {/* Content Section */}
