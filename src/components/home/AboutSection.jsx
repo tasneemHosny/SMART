@@ -11,7 +11,7 @@ const AboutSection = () => {
           className="absolute right-0 top-0 h-full sm:w-1/2 md:w-1/2 object-fit z-10"
         />
 
-        <div className="relative z-20 text-left lg:px-20 md:px-12 sm:px-8 px-6 py-8 mt-3 md:text-left xl:text-left w-full sm:w-[80%] md:w-[70%] lg:w-[70%]">
+        <div className="relative z-20 text-left lg:px-20 md:px-12 sm:px-8 px-6 py-8 mt-3 md:text-left xl:text-left w-full sm:w-[70%] md:w-[70%] lg:w-[70%]">
           <h2 className="text-base sm:text-lg md:text-xl lg:text-4xl font-bold text-white mb-6 uppercase font-montserrat">
             About Smart Technology Company
           </h2>
