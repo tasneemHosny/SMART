@@ -6,7 +6,7 @@ import logo from "./../../assets/images/logo.png";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [timeoutId, setTimeoutId] = useState(null); // To handle the delay on mouse leave
+  const [timeoutId, setTimeoutId] = useState(null); 
   const location = useLocation();
 
   const getLinkClass = (path) => {
@@ -16,14 +16,14 @@ function Navbar() {
   };
 
   const handleMouseEnter = () => {
-    clearTimeout(timeoutId); // Clear any previous timeout when hovering over the dropdown
+    clearTimeout(timeoutId); 
     setIsDropdownOpen(true);
   };
 
   const handleMouseLeave = useCallback(() => {
     const id = setTimeout(() => {
       setIsDropdownOpen(false);
-    }, 300); // Delay the closing by 300ms
+    }, 300); 
     setTimeoutId(id);
   }, [timeoutId]);
 
@@ -31,13 +31,15 @@ function Navbar() {
     <nav className="shadow-[0_4px_2px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)]">
       <div className="mx-auto flex items-center justify-between py-4 px-4 lg:px-20 sm:px-11">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <img
-            src={logo}
-            alt="Smart Technology Company Logo"
-            className="h-16"
-          />
-        </div>
+        < a href="/">
+          <div className="flex items-center space-x-2">
+            <img
+              src={logo}
+              alt="Smart Technology Company Logo"
+              className="h-16"
+            />
+          </div>
+        </a>
 
         {/* Navigation Links */}
         <div className="hidden md:flex space-x-8 relative">
@@ -63,8 +65,8 @@ function Navbar() {
             {isDropdownOpen && (
               <div
                 className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md z-10"
-                onMouseEnter={handleMouseEnter} // Keep dropdown open when hovering the menu
-                onMouseLeave={handleMouseLeave} // Close dropdown after delay when mouse leaves the menu
+                onMouseEnter={handleMouseEnter} 
+                onMouseLeave={handleMouseLeave} 
               >
                 <ul className="py-2">
                   <li>
